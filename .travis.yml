@@ -1,0 +1,10 @@
+sudo: required
+language: node_js # Add the language
+node_js:
+  - "16" # Or any other version you need
+services:
+  - docker
+
+script:
+  - docker build -t algofields/node .  # Corrected docker build command
+  - docker images algofields/node
